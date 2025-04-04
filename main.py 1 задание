@@ -1,0 +1,7 @@
+#1 задание
+try:
+    a, b = int(input("Первое число: ")), int(input("Второе число: "))
+    print(a / b)
+except:
+    print("Ошибка")
+    

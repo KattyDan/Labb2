@@ -1,0 +1,5 @@
+import re
+text = "Почта: test@mail.ru, тел: +7-123-456-78-90"
+emails = re.findall(r'\S+@\S+', text)
+phones = re.findall(r'\+\d-\d{3}-\d{3}-\d{2}-\d{2}', text)
+print(emails, phones)
