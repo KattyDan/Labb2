@@ -1,0 +1,8 @@
+
+import math_operations as m
+a=30
+b=6
+print({m.add(a,b)})
+print({m.sub(a,b)})
+print({m.mul(a,b)})
+print({m.div(a,b)})
