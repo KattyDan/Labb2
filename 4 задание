@@ -21,11 +21,10 @@ def extract_and_save_data(input_file):
     save_to_file('capital_words.txt', capital_words)
     
     # Вывод статистики
-    print(f"Найдено: {len(emails)} email-адресов, {len(phones)} телефонов, "
-          f"{len(capital_words)} слов с заглавной буквы")
+    print(f"Найдено: {len(emails)} email-адресов, {len(phones)} телефонов, " f"{len(capital_words)} слов с заглавной буквы")
 
 def save_to_file(filename, items):
-    """Сохраняет список элементов в файл, каждый элемент с новой строки"""
+    #Сохраняет список элементов в файл, каждый элемент с новой строки
     with open(filename, 'w', encoding='utf-8') as file:
         file.write('\n'.join(items) + '\n')
 
