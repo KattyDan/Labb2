@@ -1,0 +1,33 @@
+import re
+
+def extract_and_save_data(input_file):
+    # Чтение данных из файла с использованием менеджера контекста
+    with open(input_file, 'r', encoding='utf-8') as file:
+        data = file.read()
+    
+    # Регулярные выражения для поиска данных
+    email_pattern = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b"
+    phone_pattern = r"\+7-\d{3}-\d{3}-\d{2}-\d{2}" # Более точный паттерн для телефонов
+    capital_word_pattern = r"\b[A-ZА-Я][a-zа-я]*\b" # Улучшенный паттерн для слов
+    
+    # Поиск данных
+    emails = re.findall(email_pattern, data)
+    phones = re.findall(phone_pattern, data)
+    capital_words = re.findall(capital_word_pattern, data)
+    
+    # Сохранение результатов
+    save_to_file('emails.txt', emails)
+    save_to_file('phones.txt', phones)
+    save_to_file('capital_words.txt', capital_words)
+    
+    # Вывод статистики
+    print(f"Найдено: {len(emails)} email-адресов, {len(phones)} телефонов, "
+          f"{len(capital_words)} слов с заглавной буквы")
+
+def save_to_file(filename, items):
+    """Сохраняет список элементов в файл, каждый элемент с новой строки"""
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.write('\n'.join(items) + '\n')
+
+# Запуск функции
+extract_and_save_data('text.txt')
