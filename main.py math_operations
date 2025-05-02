@@ -1,4 +1,4 @@
-def add(a, b): return a + b
-def sub(a, b): return a - b
-def mul(a, b): return a * b
-def div(a, b): return a / b if b != 0 else "Ошибка"   
+def add(a, b): return a + b #принимает два числа а и б,возвращает их сумму
+def sub(a, b): return a - b #возвращает их разность
+def mul(a, b): return a * b #возвращает произведение
+def div(a, b): return a / b if b != 0 else "Ошибка"   #проверка , что б не равно нулю. если б не равно 0, возвращает рез деление а/б, если б=0, ошибка
