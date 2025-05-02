@@ -1,8 +1,8 @@
 
-import math_operations as m
-a=30
-b=6
-print({m.add(a,b)})
-print({m.sub(a,b)})
-print({m.mul(a,b)})
-print({m.div(a,b)})
+import math_operations as m #импорт модуля под всевдонимом м
+a=30 #присвоение переменной а значения 30
+b=6 #присвоение переменной б значения 6
+print({m.add(a,b)}) # вызов функции сложения из модуля
+print({m.sub(a,b)}) #вычитания из модуля
+print({m.mul(a,b)}) #умножения из модуля
+print({m.div(a,b)}) #деления из модуля
