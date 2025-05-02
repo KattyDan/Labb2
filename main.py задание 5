@@ -1,8 +1,8 @@
-s=[a for a in range(1,21)]
+s=[a for a in range(1,21)] #Генерирует список s с числами от 1 до 20 включительно, используя list comprehension
 print(s)
-chetnoe=list(filter(lambda x: (x%2==0), s)) #оставляем четные
-plus10=list(map(lambda x: x+10, s)) #увеличиваем на 10
-obrat=sorted(s, key=lambda x: x, reverse=True) #обратный порядок
+chetnoe=list(filter(lambda x: (x%2==0), s)) #оставляет только элементы списка, s для которых условие x % 2 ==0 (true)
+plus10=list(map(lambda x: x+10, s)) #увеличивает на 10
+obrat=sorted(s, key=lambda x: x, reverse=True) #сортирует список s по убыванию
 print(chetnoe)
 print(plus10)
 print(obrat)
